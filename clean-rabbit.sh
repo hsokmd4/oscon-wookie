@@ -1,6 +1,6 @@
 #!/bin/bash
 
-service rabbitmq-server stop
+systemctl stop rabbitmq-server
 killall rabbitmq-server
 chkconfig --del rabbitmq-server
 

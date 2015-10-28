@@ -8,7 +8,7 @@ for S in mgmt data api
 do
   if [ -f /etc/init.d/mysql-${S} ]
   then
-    service mysql-${S} stop
+    systemctl stop  mysql-${S}
     chkconfig --del mysql-${S}
   fi
 done
