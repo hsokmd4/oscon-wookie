@@ -4,7 +4,7 @@ systemctl stop rabbitmq-server
 killall rabbitmq-server
 chkconfig --del rabbitmq-server
 
-sleep 2
+sleep 10
 
 service epmd stop
 killall epmd
@@ -17,7 +17,7 @@ then
   lvremove lv_rabbitmq
   vgchange -an vg_data
   vgremove -f vg_data
-  pvremove /dev/sdb
+  pvremove /dev/sdc
 fi
 
 rm -rf /etc/rabbitmq /var/log/rabbitmq /srv/rabbitmq /srv/util /usr/sbin/rabbitmqadmin
